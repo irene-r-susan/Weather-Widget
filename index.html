@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Widget</title>
+  <link rel="stylesheet" href="index.css" />
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="main">
+     <lottie-player
+  id="weather-animation"
+  src="sunny.json"
+  background="transparent"
+  speed="1"
+  style="width: 50px; height: 50px;"
+  loop
+  autoplay
+   ></lottie-player>
+
+
+  <h2> Weather Widget</h2>
+  </div>
+  <input type="text" id="cityInput" placeholder="Enter city " />
+  <button id="searchBtn">Search</button>
+  <div id="weatherBox" class="hidden">
+  
+    <h3 id="cityName"></h3>
+
+    <p id="temp"></p>
+   
+
+
+<div id="toggleContainer" style="display: none;">
+  <label class="switch">
+    <input type="checkbox" id="unitToggle">
+    <span class="slider"></span>
+  </label>
+  <span id="unitLabel">°C</span>
+</div>
+
+ <p id="desc"></p>
+    <p id="humidity"></p>
+  </div>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
